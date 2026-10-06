@@ -1,0 +1,16 @@
+{
+  "name": "sharechat-ai-context",
+  "owner": {
+    "name": "ShareChat Engineering"
+  },
+  "metadata": {
+    "description": "Reusable AI skills shared across every ShareChat repo."
+  },
+  "plugins": [
+    {
+      "name": "api-compatibility",
+      "source": "./plugins/api-compatibility",
+      "description": "Keep APIs backward-compatible with installed mobile app versions."
+    }
+  ]
+}

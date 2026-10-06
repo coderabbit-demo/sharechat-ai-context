@@ -1,0 +1,5 @@
+{
+  "name": "api-compatibility",
+  "description": "Keep APIs backward-compatible with installed mobile app versions.",
+  "version": "1.0.0"
+}
