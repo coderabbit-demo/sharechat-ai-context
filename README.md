@@ -31,6 +31,29 @@ keeps its own contract next to its code (e.g. `sharechat-feed-service/api/openap
 /plugin install api-compatibility@sharechat-ai-context
 ```
 
+## CodeRabbit pre-merge checks
+
+`coderabbit/` holds CodeRabbit config fragments generated from the skills, so pre-merge checks in every
+repo enforce the exact rule text. Don't edit them by hand: change the skill, then run
+
+```
+node scripts/generate-coderabbit-checks.mjs
+```
+
+CI fails if a fragment is out of date. A repo uses a fragment from its `.coderabbit.config.ts`:
+
+```ts
+import { defineConfig, includeRemote, mergeConfig } from "@coderabbitai/config"
+
+const mobileApiCompatibility = includeRemote({
+	repo: "coderabbit-demo/sharechat-ai-context",
+	path: "coderabbit/mobile-api-compatibility.ts",
+	ref: "main",
+})
+
+export default defineConfig(mergeConfig(mobileApiCompatibility, { /* repo settings */ }))
+```
+
 ## Adding a skill
 
 Add it under an existing plugin's `skills/`, or create a new plugin folder and list it in
