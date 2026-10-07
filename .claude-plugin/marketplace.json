@@ -11,6 +11,11 @@
       "name": "api-compatibility",
       "source": "./plugins/api-compatibility",
       "description": "Keep APIs backward-compatible with installed mobile app versions."
+    },
+    {
+      "name": "performance",
+      "source": "./plugins/performance",
+      "description": "Keep high-traffic backend endpoints fast and stable under load."
     }
   ]
 }

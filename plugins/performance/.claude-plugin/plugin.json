@@ -1,0 +1,5 @@
+{
+  "name": "performance",
+  "description": "Keep high-traffic backend endpoints fast and stable under load.",
+  "version": "1.0.0"
+}
